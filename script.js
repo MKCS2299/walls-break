@@ -14,12 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
       // Divider opens
       divider.classList.add("open");
 
-      // First bubble
+      // First confession appears
       setTimeout(() => {
         sentBubble.classList.add("show");
       }, 600);
 
-      // Second bubble
+      // Returned confession appears
       setTimeout(() => {
         receivedBubble.classList.add("show");
       }, 1400);
