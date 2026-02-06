@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const carMoment = document.getElementById("carMoment");
   const receivedBubble = carMoment.querySelector(".received");
   const divider = document.querySelector(".divider");
+  const hint = carMoment.querySelector(".hint");
 
   let revealed = false;
 
@@ -9,10 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (revealed) return;
     revealed = true;
 
-    // Show her response
     receivedBubble.classList.add("show");
-
-    // Dissolve the divider
     divider.classList.add("open");
+    hint.style.display = "none";
   });
 });
