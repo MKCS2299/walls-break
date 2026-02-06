@@ -6,11 +6,17 @@
   box-sizing: border-box;
 }
 
+/* ===== GHIBLI BACKGROUND ===== */
 body {
   font-family: 'Playfair Display', serif;
-  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  min-height: 200vh;
+  background:
+    linear-gradient(
+      rgba(10, 15, 25, 0.75),
+      rgba(10, 15, 25, 0.75)
+    ),
+    url("ghibli-walls.jpg") center / cover no-repeat fixed;
   color: #f5f5f5;
-  min-height: 100vh;
 }
 
 /* ===== MAIN LAYOUT ===== */
@@ -18,13 +24,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 120px 20px;
-  gap: 60px;
-  flex-wrap: wrap;
+  gap: 80px;
+  padding-top: 160px;
 }
 
 .moment {
-  width: 280px;
+  width: 260px;
   text-align: center;
 }
 
@@ -32,9 +37,9 @@ body {
 .phone {
   width: 200px;
   height: 360px;
-  border-radius: 28px;
   background: #111;
-  padding: 20px;
+  border-radius: 28px;
+  padding: 16px;
   margin: auto;
   box-shadow: 0 0 30px rgba(0,0,0,0.6);
 }
@@ -47,35 +52,54 @@ body {
   color: #111;
 }
 
+/* ===== CAR ===== */
+.people {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* ===== BUBBLES ===== */
 .bubble {
   padding: 12px 16px;
   border-radius: 18px;
-  display: inline-block;
   margin-top: 20px;
   font-size: 1rem;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.8s ease;
 }
 
 .sent {
   background: #d1e7ff;
-  align-self: flex-end;
-}
-
-/* ===== CAR ===== */
-.car {
-  margin-top: 40px;
-}
-
-.people {
-  font-size: 2.2rem;
-  display: flex;
-  justify-content: center;
-  gap: 16px;
 }
 
 .received {
   background: #ffd6e0;
   color: #111;
-  margin: 16px auto 0;
+}
+
+.bubble.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ===== DIVIDER ===== */
+.divider {
+  width: 2px;
+  height: 220px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255,255,255,0.7),
+    transparent
+  );
+  transition: transform 1.2s ease;
+}
+
+.divider.open {
+  transform: scaleY(0.3);
 }
 
 /* ===== TEXT ===== */
@@ -91,32 +115,9 @@ body {
   opacity: 0.85;
 }
 
-/* ===== DIVIDER ===== */
-.divider {
-  width: 2px;
-  height: 220px;
-  background: linear-gradient(to bottom, transparent, #ffffff66, transparent);
-}
-
-/* ===== ENDING ===== */
 .ending {
   text-align: center;
-  padding-bottom: 60px;
+  margin-top: 140px;
   font-style: italic;
   opacity: 0.9;
 }
-
-/* ===== FADE-IN ===== */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 1.2s ease;
-}
-
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.delay-2 { transition-delay: 1.2s; }
-.delay-4 { transition-delay: 2.4s; }
