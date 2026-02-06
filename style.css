@@ -6,72 +6,52 @@
   box-sizing: border-box;
 }
 
-/* ===== GHIBLI BACKGROUND ===== */
+/* ===== BACKGROUND IMAGE ===== */
 body {
   font-family: 'Playfair Display', serif;
   min-height: 200vh;
-  color: #f5f5f5;
+  color: #fff;
 
   background-image:
-    linear-gradient(
-      rgba(10, 15, 25, 0.75),
-      rgba(10, 15, 25, 0.75)
-    ),
+    linear-gradient(rgba(10,15,25,0.6), rgba(10,15,25,0.6)),
     url("./ghibli-walls.jpg");
 
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-/* ===== SCENE LAYOUT ===== */
-.scene {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 80px;
-  padding-top: 160px;
+/* ===== OVERLAY LAYER ===== */
+.overlay {
+  position: relative;
+  height: 100vh;
 }
 
+/* ===== MOMENTS ===== */
 .moment {
-  width: 260px;
+  position: absolute;
+  max-width: 260px;
   text-align: center;
 }
 
-/* ===== PHONE ===== */
-.phone {
-  width: 200px;
-  height: 360px;
-  background: #111;
-  border-radius: 28px;
-  padding: 16px;
-  margin: auto;
-  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+/* LEFT SIDE POSITION */
+.moment.left {
+  top: 40%;
+  left: 12%;
 }
 
-.screen {
-  background: #eaeaea;
-  height: 100%;
-  border-radius: 18px;
-  padding: 20px;
-  color: #111;
-}
-
-/* ===== CAR ===== */
-.people {
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 14px;
+/* RIGHT SIDE POSITION */
+.moment.right {
+  top: 42%;
+  right: 12%;
 }
 
 /* ===== SPEECH BUBBLES ===== */
 .bubble {
-  padding: 12px 16px;
+  padding: 14px 18px;
   border-radius: 18px;
-  margin-top: 20px;
   font-size: 1rem;
+  margin-bottom: 10px;
 
   opacity: 0;
   transform: scale(0.9);
@@ -79,7 +59,8 @@ body {
 }
 
 .sent {
-  background: #d1e7ff;
+  background: #cfe8ff;
+  color: #111;
 }
 
 .received {
@@ -92,39 +73,43 @@ body {
   transform: scale(1);
 }
 
-/* ===== DIVIDER ===== */
+/* ===== CENTER DIVIDER ===== */
 .divider {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
   width: 2px;
-  height: 220px;
+  height: 260px;
   background: linear-gradient(
     to bottom,
     transparent,
-    rgba(255,255,255,0.8),
+    rgba(255,255,255,0.9),
     transparent
   );
   transition: transform 1.2s ease;
 }
 
 .divider.open {
-  transform: scaleY(0.3);
+  transform: translateX(-50%) scaleY(0.3);
 }
 
 /* ===== TEXT ===== */
 .date {
   font-size: 0.85rem;
-  opacity: 0.7;
-  margin-bottom: 10px;
+  opacity: 0.8;
+  margin-bottom: 6px;
 }
 
 .caption {
-  margin-top: 16px;
   font-size: 0.95rem;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
+/* ===== ENDING ===== */
 .ending {
+  margin-top: 120vh;
   text-align: center;
-  margin-top: 140px;
   font-style: italic;
   opacity: 0.9;
 }
