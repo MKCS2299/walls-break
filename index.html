@@ -10,9 +10,9 @@
 
   <div class="overlay">
 
-    <!-- LEFT: TEXT CONFESSION -->
+    <!-- LEFT: TEXT CONFESSION (VISIBLE IMMEDIATELY) -->
     <div class="moment left">
-      <div class="bubble sent">
+      <div class="bubble sent show">
         I like you
       </div>
       <div class="date">11.11.25</div>
@@ -22,10 +22,22 @@
     <!-- CENTER DIVIDER -->
     <div class="divider"></div>
 
-    <!-- RIGHT: SPOKEN CONFESSION -->
-    <div class="moment right">
+    <!-- RIGHT: CAR CONFESSION (HIDDEN UNTIL CLICK) -->
+    <div class="moment right clickable" id="carMoment">
       <div class="bubble received">
         I like you
       </div>
-      <div class="date">Later that night</div>
-      <div class="caption
+      <div class="date">30.11.25</div>
+      <div class="caption">And then, you said it back.</div>
+    </div>
+
+  </div>
+
+  <footer class="ending">
+    <p>Some walls don’t fall.</p>
+    <p>They quietly open.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
