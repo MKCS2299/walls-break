@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-/* ===== BACKGROUND (GHIBLI ART) ===== */
+/* ===== BACKGROUND ===== */
 body {
   font-family: 'Playfair Display', serif;
   min-height: 200vh;
@@ -34,16 +34,17 @@ body {
   text-align: center;
 }
 
-/* LEFT ALIGNMENT (PHONE AREA IN IMAGE) */
+/* LEFT POSITION */
 .moment.left {
   top: 42%;
   left: 12%;
 }
 
-/* RIGHT ALIGNMENT (CAR AREA IN IMAGE) */
+/* RIGHT POSITION */
 .moment.right {
   top: 44%;
   right: 12%;
+  cursor: pointer;
 }
 
 /* ===== BUBBLES ===== */
@@ -53,21 +54,26 @@ body {
   font-size: 1rem;
   margin-bottom: 10px;
 
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+
   opacity: 0;
-  transform: scale(0.9);
-  transition: all 0.8s ease;
+  transform: scale(0.95);
+  transition: all 0.6s ease;
 }
 
 .sent {
-  background: #cfe8ff;
+  background: rgba(207,232,255,0.95);
   color: #111;
 }
 
 .received {
-  background: #ffd6e0;
+  background: rgba(255,214,224,0.95);
   color: #111;
 }
 
+/* Visible state */
 .bubble.show {
   opacity: 1;
   transform: scale(1);
@@ -87,17 +93,18 @@ body {
     rgba(255,255,255,0.9),
     transparent
   );
-  transition: transform 1.2s ease;
+  transition: opacity 1.2s ease, filter 1.2s ease;
 }
 
 .divider.open {
-  transform: translateX(-50%) scaleY(0.3);
+  opacity: 0;
+  filter: blur(8px);
 }
 
 /* ===== TEXT ===== */
 .date {
   font-size: 0.85rem;
-  opacity: 0.8;
+  opacity: 0.85;
   margin-bottom: 6px;
 }
 
