@@ -8,7 +8,7 @@ body {
       rgba(10, 15, 25, 0.75),
       rgba(10, 15, 25, 0.75)
     ),
-    url("./ghibli-walls.jpg");
+    url("./ghibli-walls.png");
 
   background-size: cover;
   background-position: center;
