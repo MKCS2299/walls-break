@@ -1,23 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const carMoment = document.getElementById("carMoment");
+  const receivedBubble = carMoment.querySelector(".received");
   const divider = document.querySelector(".divider");
-  const sent = document.querySelector(".sent");
-  const received = document.querySelector(".received");
 
-  let triggered = false;
+  let revealed = false;
 
-  window.addEventListener("scroll", () => {
-    if (!triggered && window.scrollY > window.innerHeight * 0.3) {
-      triggered = true;
+  carMoment.addEventListener("click", () => {
+    if (revealed) return;
+    revealed = true;
 
-      divider.classList.add("open");
+    // Show her response
+    receivedBubble.classList.add("show");
 
-      setTimeout(() => {
-        sent.classList.add("show");
-      }, 600);
-
-      setTimeout(() => {
-        received.classList.add("show");
-      }, 1400);
-    }
+    // Dissolve the divider
+    divider.classList.add("open");
   });
 });
