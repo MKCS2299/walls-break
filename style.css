@@ -34,17 +34,24 @@ body {
   text-align: center;
 }
 
-/* LEFT POSITION */
+/* LEFT */
 .moment.left {
   top: 42%;
   left: 12%;
 }
 
-/* RIGHT POSITION */
+/* RIGHT */
 .moment.right {
   top: 44%;
   right: 12%;
   cursor: pointer;
+}
+
+/* CLICK HINT */
+.hint {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-bottom: 6px;
 }
 
 /* ===== BUBBLES ===== */
@@ -73,7 +80,6 @@ body {
   color: #111;
 }
 
-/* Visible state */
 .bubble.show {
   opacity: 1;
   transform: scale(1);
