@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-/* ===== BACKGROUND IMAGE ===== */
+/* ===== BACKGROUND (GHIBLI ART) ===== */
 body {
   font-family: 'Playfair Display', serif;
   min-height: 200vh;
@@ -21,7 +21,7 @@ body {
   background-attachment: fixed;
 }
 
-/* ===== OVERLAY LAYER ===== */
+/* ===== OVERLAY ===== */
 .overlay {
   position: relative;
   height: 100vh;
@@ -34,19 +34,19 @@ body {
   text-align: center;
 }
 
-/* LEFT SIDE POSITION */
+/* LEFT ALIGNMENT (PHONE AREA IN IMAGE) */
 .moment.left {
-  top: 40%;
+  top: 42%;
   left: 12%;
 }
 
-/* RIGHT SIDE POSITION */
+/* RIGHT ALIGNMENT (CAR AREA IN IMAGE) */
 .moment.right {
-  top: 42%;
+  top: 44%;
   right: 12%;
 }
 
-/* ===== SPEECH BUBBLES ===== */
+/* ===== BUBBLES ===== */
 .bubble {
   padding: 14px 18px;
   border-radius: 18px;
@@ -73,7 +73,7 @@ body {
   transform: scale(1);
 }
 
-/* ===== CENTER DIVIDER ===== */
+/* ===== DIVIDER ===== */
 .divider {
   position: absolute;
   top: 30%;
