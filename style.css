@@ -1,37 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* ===== BACKGROUND ===== */
-body {
-  font-family: 'Playfair Display', serif;
-  min-height: 200vh;
-  color: #fff;
-
-  background-image:
-    linear-gradient(rgba(10,15,25,0.6), rgba(10,15,25,0.6)),
-    url("./ghibli-walls.jpg");
-
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-/* ===== OVERLAY ===== */
-.overlay {
-  position: relative;
-  height: 100vh;
-}
-
-/* ===== MOMENTS ===== */
-.moment {
-  position: absolute;
-  max-width: 260px;
-  text-align: center;
+text-align: center;
 }
 
 /* LEFT */
@@ -47,112 +14,21 @@ body {
   cursor: pointer;
 }
 
-/* ===== CLICK HINT ===== */
+/* CLICK HINT */
 .hint {
   font-size: 0.8rem;
   opacity: 0.6;
   margin-bottom: 6px;
-  transition: opacity 0.4s ease;
-}
-
-.moment.right.unlocked .hint {
-  opacity: 0;
-  pointer-events: none;
 }
 
 /* ===== BUBBLES ===== */
 .bubble {
   padding: 14px 18px;
-  border-radius: 18px;
-  font-size: 1rem;
-  margin-bottom: 10px;
-
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-
-  opacity: 0;
-  transform: scale(0.95);
-  transition: all 0.6s ease;
-}
-
-.sent {
-  background: rgba(207,232,255,0.95);
+@@ -73,7 +80,6 @@ body {
   color: #111;
 }
 
-.received {
-  background: rgba(255,214,224,0.95);
-  color: #111;
-}
 
-/* visible state */
 .bubble.show {
   opacity: 1;
   transform: scale(1);
-}
-
-/* ===== CONDITIONAL VULNERABILITY (HOVER) ===== */
-.hover-reveal {
-  filter: blur(6px);
-  opacity: 0.35;
-  transition: filter 0.6s ease, opacity 0.6s ease;
-}
-
-.hover-reveal:hover {
-  filter: blur(0);
-  opacity: 1;
-}
-
-/* ===== IRREVERSIBLE OPENNESS (CLICK) ===== */
-.moment.right.unlocked .hover-reveal {
-  filter: blur(0);
-  opacity: 1;
-}
-
-/* subtle warmth after acceptance */
-.moment.right.unlocked .received {
-  background: rgba(255,224,232,0.98);
-}
-
-/* ===== DIVIDER ===== */
-.divider {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 260px;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(255,255,255,0.9),
-    transparent
-  );
-  transition: opacity 1.2s ease, filter 1.2s ease;
-}
-
-.divider.open {
-  opacity: 0;
-  filter: blur(8px);
-}
-
-/* ===== TEXT ===== */
-.date {
-  font-size: 0.85rem;
-  opacity: 0.85;
-  margin-bottom: 6px;
-}
-
-.caption {
-  font-size: 0.95rem;
-  opacity: 0.9;
-}
-
-/* ===== ENDING ===== */
-.ending {
-  margin-top: 120vh;
-  text-align: center;
-  font-style: italic;
-  opacity: 0.9;
-}
