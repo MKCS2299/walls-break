@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 100);
   }
 
-  tapArea.addEventListener("click", () => {
+  function openWall() {
     if (opened) return;
     opened = true;
 
@@ -36,5 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       receivedBubble.classList.add("show");
     }, 1400);
-  });
+  }
+
+  tapArea.addEventListener("click", openWall);
+  tapArea.addEventListener("touchstart", (e) => {
+    e.preventDefault();
+    openWall();
+  }, { passive: false });
 });
