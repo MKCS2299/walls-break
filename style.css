@@ -6,30 +6,27 @@
   box-sizing: border-box;
 }
 
-/* ===== GHIBLI BACKGROUND ===== */
+/* GHIBLI BACKGROUND */
 body {
   font-family: 'Playfair Display', serif;
   min-height: 100vh;
   background:
-    linear-gradient(
-      rgba(10, 20, 30, 0.75),
-      rgba(10, 20, 30, 0.75)
-    ),
+    linear-gradient(rgba(10,20,30,0.75), rgba(10,20,30,0.75)),
     url("ghibli-walls.jpg") center / cover no-repeat fixed;
   color: #f5f5f5;
 }
 
-/* ===== LAYOUT ===== */
+/* LAYOUT */
 .scene {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 80px;
+  gap: 70px;
   padding: 140px 20px 80px;
   flex-wrap: wrap;
 }
 
-/* ===== MOMENTS ===== */
+/* MOMENTS */
 .moment {
   width: 260px;
   text-align: center;
@@ -81,6 +78,7 @@ body {
 
 .sent {
   background: #d1e7ff;
+  color: #111;
 }
 
 .received {
@@ -89,6 +87,14 @@ body {
 }
 
 /* DIVIDER */
+.divider-container {
+  position: relative;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .divider {
   width: 2px;
   height: 220px;
@@ -103,6 +109,28 @@ body {
 
 .divider.open {
   transform: scaleY(0.3);
+}
+
+/* TAP TO OPEN */
+.tap-open {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  opacity: 0.6;
+  letter-spacing: 0.05em;
+  font-style: italic;
+  animation: breathe 2.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.tap-open.hide {
+  opacity: 0;
+  animation: none;
+  transition: opacity 0.8s ease;
+}
+
+@keyframes breathe {
+  0%,100% { opacity: 0.35; }
+  50% { opacity: 0.75; }
 }
 
 /* TEXT */
