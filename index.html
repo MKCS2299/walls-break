@@ -1,17 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>First Flower</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-  <div class="overlay">
+<body class="phase-sun">
 
-    <!-- LEFT: ALWAYS VISIBLE -->
-    <div class="moment left">
-      <div class="bubble sent show">
-        I like you
-@@ -22,8 +22,9 @@
-    <!-- CENTER DIVIDER -->
-    <div class="divider"></div>
+  <!-- Sun -->
+  <div class="sun"></div>
 
-    <!-- RIGHT: CLICK TO REVEAL -->
-    <div class="moment right" id="carMoment">
-      <div class="hint">(tap)</div>
-      <div class="bubble received">
-        I like you
-      </div>
+  <!-- Floating flowers -->
+  <div class="flower-container">
+    <div class="floating-flower">✿</div>
+    <div class="floating-flower delay">✿</div>
+  </div>
+
+  <main class="content">
+
+    <h1 class="fade-in">This is for you</h1>
+
+    <p class="fade-in">
+      There was a moment I keep coming back to.
+    </p>
+
+    <p class="fade-in">
+      A hillside.<br>
+      A clear sky.
+    </p>
+
+    <p class="fade-in highlight">
+      30.11.25
+    </p>
+
+    <p class="fade-in pause">
+      I gave you my first flower —
+    </p>
+
+    <p class="fade-in highlight">
+      and you took it.
+    </p>
+
+    <p class="fade-in">
+      No big words.<br>
+      Just the sun slowly deciding to leave.
+    </p>
+
+    <p class="fade-in">
+      So today, I give you this flower too.
+    </p>
+
+    <p class="fade-in signature">
+      I didn’t know it then,<br>
+      but that was me choosing you.
+    </p>
+
+    <p class="fade-in whisper">
+      (Some moments stay warm.)
+    </p>
+
+    <!-- Tap hint -->
+    <p class="tap-hint">tap anywhere</p>
+
+    <!-- Final flower -->
+    <div class="final-flower-container">
+      <div class="final-flower">✿</div>
+      <p class="final-line">
+        The flower was always meant for you.<br>
+        It will always come to you.
+      </p>
+    </div>
+
+  </main>
+
+  <!-- Background music -->
+  <audio id="bg-music" loop>
+    <source src="zehnaseeb.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
