@@ -1,34 +1,127 @@
-text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* LEFT */
-.moment.left {
-  top: 42%;
-  left: 12%;
+/* ===== GHIBLI BACKGROUND ===== */
+body {
+  font-family: 'Playfair Display', serif;
+  min-height: 100vh;
+  background:
+    linear-gradient(
+      rgba(10, 20, 30, 0.75),
+      rgba(10, 20, 30, 0.75)
+    ),
+    url("ghibli-walls.jpg") center / cover no-repeat fixed;
+  color: #f5f5f5;
 }
 
-/* RIGHT */
-.moment.right {
-  top: 44%;
-  right: 12%;
-  cursor: pointer;
+/* ===== LAYOUT ===== */
+.scene {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  padding: 140px 20px 80px;
+  flex-wrap: wrap;
 }
 
-/* CLICK HINT */
-.hint {
-  font-size: 0.8rem;
-  opacity: 0.6;
-  margin-bottom: 6px;
+/* ===== MOMENTS ===== */
+.moment {
+  width: 260px;
+  text-align: center;
 }
 
-/* ===== BUBBLES ===== */
-.bubble {
-  padding: 14px 18px;
-@@ -73,7 +80,6 @@ body {
+/* PHONE */
+.phone {
+  width: 200px;
+  height: 360px;
+  border-radius: 28px;
+  background: #111;
+  padding: 18px;
+  margin: auto;
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
+
+.screen {
+  background: #f0f0f0;
+  height: 100%;
+  border-radius: 18px;
+  padding: 20px;
   color: #111;
 }
 
+/* CAR */
+.people {
+  font-size: 2.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+/* BUBBLES */
+.bubble {
+  padding: 12px 16px;
+  border-radius: 18px;
+  margin-top: 20px;
+  font-size: 1rem;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.8s ease;
+}
 
 .bubble.show {
   opacity: 1;
   transform: scale(1);
+}
+
+.sent {
+  background: #d1e7ff;
+}
+
+.received {
+  background: #ffd6e0;
+  color: #111;
+}
+
+/* DIVIDER */
+.divider {
+  width: 2px;
+  height: 220px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255,255,255,0.7),
+    transparent
+  );
+  transition: transform 1.2s ease;
+}
+
+.divider.open {
+  transform: scaleY(0.3);
+}
+
+/* TEXT */
+.date {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.caption {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* ENDING */
+.ending {
+  text-align: center;
+  padding: 60px 20px;
+  font-style: italic;
+  opacity: 0.9;
+}
