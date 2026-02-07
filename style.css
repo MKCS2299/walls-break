@@ -47,11 +47,17 @@ body {
   cursor: pointer;
 }
 
-/* CLICK HINT */
+/* ===== CLICK HINT ===== */
 .hint {
   font-size: 0.8rem;
   opacity: 0.6;
   margin-bottom: 6px;
+  transition: opacity 0.4s ease;
+}
+
+.moment.right.unlocked .hint {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* ===== BUBBLES ===== */
@@ -80,9 +86,33 @@ body {
   color: #111;
 }
 
+/* visible state */
 .bubble.show {
   opacity: 1;
   transform: scale(1);
+}
+
+/* ===== CONDITIONAL VULNERABILITY (HOVER) ===== */
+.hover-reveal {
+  filter: blur(6px);
+  opacity: 0.35;
+  transition: filter 0.6s ease, opacity 0.6s ease;
+}
+
+.hover-reveal:hover {
+  filter: blur(0);
+  opacity: 1;
+}
+
+/* ===== IRREVERSIBLE OPENNESS (CLICK) ===== */
+.moment.right.unlocked .hover-reveal {
+  filter: blur(0);
+  opacity: 1;
+}
+
+/* subtle warmth after acceptance */
+.moment.right.unlocked .received {
+  background: rgba(255,224,232,0.98);
 }
 
 /* ===== DIVIDER ===== */
