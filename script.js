@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sentBubble = document.querySelector(".sent");
   const receivedBubble = document.querySelector(".received");
   const music = document.getElementById("bg-music");
+  const tapArea = document.querySelector(".divider-container");
 
   let opened = false;
 
@@ -20,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 100);
   }
 
-  document.body.addEventListener("click", () => {
+  tapArea.addEventListener("click", () => {
     if (opened) return;
     opened = true;
 
