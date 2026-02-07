@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   const divider = document.querySelector(".divider");
+  const tapOpen = document.querySelector(".tap-open");
   const sentBubble = document.querySelector(".sent");
   const receivedBubble = document.querySelector(".received");
   const music = document.getElementById("bg-music");
 
-  let triggered = false;
+  let opened = false;
 
-  /* Smooth music fade-in */
   function fadeInMusic(target = 0.35, duration = 4000) {
     music.volume = 0;
     music.play().catch(() => {});
@@ -20,12 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 100);
   }
 
-  /* Trigger on first scroll OR click */
-  function triggerMoment() {
-    if (triggered) return;
-    triggered = true;
+  document.body.addEventListener("click", () => {
+    if (opened) return;
+    opened = true;
 
     divider.classList.add("open");
+    tapOpen.classList.add("hide");
     fadeInMusic();
 
     setTimeout(() => {
@@ -35,8 +35,5 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       receivedBubble.classList.add("show");
     }, 1400);
-  }
-
-  window.addEventListener("scroll", triggerMoment, { once: true });
-  document.body.addEventListener("click", triggerMoment, { once: true });
+  });
 });
