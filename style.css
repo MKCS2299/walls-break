@@ -6,13 +6,16 @@
   box-sizing: border-box;
 }
 
-/* BACKGROUND */
+html, body {
+  height: 100%;
+  touch-action: manipulation;
+}
+
 body {
   font-family: 'Playfair Display', serif;
-  min-height: 100vh;
   background:
     linear-gradient(rgba(10,20,30,0.75), rgba(10,20,30,0.75)),
-    url("ghibli-walls.jpg") center / cover no-repeat fixed;
+    url("ghibli-walls.jpg") center / cover no-repeat;
   color: #f5f5f5;
 }
 
@@ -21,25 +24,31 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 70px;
-  padding: 140px 20px 80px;
+  gap: 60px;
   flex-wrap: wrap;
+
+  padding-top: calc(120px + env(safe-area-inset-top));
+  padding-bottom: calc(80px + env(safe-area-inset-bottom));
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 /* MOMENTS */
 .moment {
   width: 260px;
+  max-width: 90vw;
   text-align: center;
 }
 
 /* PHONE */
 .phone {
   width: 200px;
+  max-width: 90vw;
   height: 360px;
-  border-radius: 28px;
-  background: #111;
-  padding: 18px;
   margin: auto;
+  background: #111;
+  border-radius: 28px;
+  padding: 18px;
   box-shadow: 0 0 30px rgba(0,0,0,0.6);
 }
 
@@ -56,15 +65,15 @@ body {
   font-size: 2.2rem;
   display: flex;
   justify-content: center;
-  gap: 14px;
+  gap: 12px;
   margin-top: 10px;
 }
 
 /* BUBBLES */
 .bubble {
+  margin-top: 20px;
   padding: 12px 16px;
   border-radius: 18px;
-  margin-top: 20px;
   font-size: 1rem;
   opacity: 0;
   transform: scale(0.9);
@@ -88,12 +97,11 @@ body {
 
 /* DIVIDER */
 .divider-container {
-  position: relative;
-  height: 240px;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .divider {
@@ -112,12 +120,11 @@ body {
   transform: scaleY(0.3);
 }
 
-/* TAP TO OPEN */
+/* TAP */
 .tap-open {
-  margin-top: 14px;
+  margin-top: 12px;
   font-size: 0.9rem;
   opacity: 0.6;
-  letter-spacing: 0.05em;
   font-style: italic;
   animation: breathe 2.2s ease-in-out infinite;
 }
@@ -137,16 +144,16 @@ body {
 .date {
   font-size: 0.85rem;
   opacity: 0.7;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .caption {
-  margin-top: 16px;
+  margin-top: 14px;
   font-size: 0.95rem;
   opacity: 0.85;
 }
 
-/* ENDING */
+/* END */
 .ending {
   text-align: center;
   padding: 60px 20px;
