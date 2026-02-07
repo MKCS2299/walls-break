@@ -3,77 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>First Flower</title>
+  <title>Walls Break</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="phase-sun">
+<body>
 
-  <!-- Sun -->
-  <div class="sun"></div>
+  <main class="scene">
 
-  <!-- Floating flowers -->
-  <div class="flower-container">
-    <div class="floating-flower">✿</div>
-    <div class="floating-flower delay">✿</div>
-  </div>
+    <!-- LEFT: TEXT CONFESSION -->
+    <div class="moment left">
+      <div class="phone">
+        <div class="screen">
+          <p class="date">11.11.25</p>
+          <div class="bubble sent hidden">I like you</div>
+        </div>
+      </div>
+      <p class="caption">It took courage to send this.</p>
+    </div>
 
-  <main class="content">
+    <!-- DIVIDER -->
+    <div class="divider"></div>
 
-    <h1 class="fade-in">This is for you</h1>
-
-    <p class="fade-in">
-      There was a moment I keep coming back to.
-    </p>
-
-    <p class="fade-in">
-      A hillside.<br>
-      A clear sky.
-    </p>
-
-    <p class="fade-in highlight">
-      30.11.25
-    </p>
-
-    <p class="fade-in pause">
-      I gave you my first flower —
-    </p>
-
-    <p class="fade-in highlight">
-      and you took it.
-    </p>
-
-    <p class="fade-in">
-      No big words.<br>
-      Just the sun slowly deciding to leave.
-    </p>
-
-    <p class="fade-in">
-      So today, I give you this flower too.
-    </p>
-
-    <p class="fade-in signature">
-      I didn’t know it then,<br>
-      but that was me choosing you.
-    </p>
-
-    <p class="fade-in whisper">
-      (Some moments stay warm.)
-    </p>
-
-    <!-- Tap hint -->
-    <p class="tap-hint">tap anywhere</p>
-
-    <!-- Final flower -->
-    <div class="final-flower-container">
-      <div class="final-flower">✿</div>
-      <p class="final-line">
-        The flower was always meant for you.<br>
-        It will always come to you.
-      </p>
+    <!-- RIGHT: CAR CONFESSION -->
+    <div class="moment right">
+      <div class="car">
+        <div class="people">
+          <span class="person">🧑‍💼</span>
+          <span class="person">👩</span>
+        </div>
+        <div class="bubble received hidden">I like you</div>
+        <p class="date">Later that night</p>
+      </div>
+      <p class="caption">And then, you said it back.</p>
     </div>
 
   </main>
+
+  <footer class="ending">
+    <p>Some walls don’t fall.</p>
+    <p>They quietly open.</p>
+  </footer>
 
   <!-- Background music -->
   <audio id="bg-music" loop>
