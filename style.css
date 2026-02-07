@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-/* GHIBLI BACKGROUND */
+/* BACKGROUND */
 body {
   font-family: 'Playfair Display', serif;
   min-height: 100vh;
@@ -93,6 +93,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .divider {
@@ -119,7 +120,6 @@ body {
   letter-spacing: 0.05em;
   font-style: italic;
   animation: breathe 2.2s ease-in-out infinite;
-  pointer-events: none;
 }
 
 .tap-open.hide {
